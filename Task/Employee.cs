@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Task
 {
+    /// <summary>
+    /// Перечисление, отвечающее за должность сотрудника.
+    /// </summary>
     enum Position
     {
         Customer,
@@ -15,9 +18,24 @@ namespace Task
 
     internal class Employee
     {
-        private string Name {  get; set; }
-        private Position Position { get; set; }
-        private Task Task { get; set; }
+        private string name;
+        private Position position;
+        private Task task;
+        /// <summary>
+        /// Свойство для чтения и заполнения поля name.
+        /// </summary>
+        public string Name {  get; set; }
+        /// <summary>
+        /// Свойство для чтения и заполнения поля position.
+        /// </summary>
+        public Position Position { get; set; }
+        /// <summary>
+        /// Свойство для чтения и заполнения поля task.
+        /// </summary>
+        public Task Task { get; set; }
+        /// <summary>
+        /// Конструктор, который создает новый экземпляр класса и заполняет его данными.
+        /// </summary>
         public Employee(string name, Position position) 
         {
             Name = name;

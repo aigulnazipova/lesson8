@@ -21,6 +21,9 @@ namespace Task
         private List<Task> tasks;
         private ProjectStatus status;
         private string Description { get; set; }
+        /// <summary>
+        /// Свойство для чтения поля deadline.
+        /// </summary>
         private DateTime Deadline 
         { 
             get
@@ -28,6 +31,9 @@ namespace Task
                 return deadline;
             }
         }
+        /// <summary>
+        /// Свойство для чтения поля customer.
+        /// </summary>
         public Employee Customer 
         { 
             get
@@ -35,6 +41,9 @@ namespace Task
                 return customer;
             }
         }
+        /// <summary>
+        /// Свойство для чтения поля teamLead.
+        /// </summary>
         public Employee TeamLead 
         { 
             get
@@ -42,6 +51,9 @@ namespace Task
                 return teamLead;
             }
         }
+        /// <summary>
+        /// Свойство для чтения поля task.
+        /// </summary>
         private List<Task> Tasks 
         { 
             get
@@ -49,7 +61,9 @@ namespace Task
                 return tasks;
             } 
         }
-        
+        /// <summary>
+        /// Свойство для чтения поля status.
+        /// </summary>
         public ProjectStatus Status
         {
             get
@@ -57,14 +71,23 @@ namespace Task
                 return status;
             }
         }
+        /// <summary>
+        /// Метод, который добавляет задачу в список задач tasks.
+        /// </summary>
         public void AddTask(Task task)
         {
             tasks.Add(task);
         }
+        /// <summary>
+        /// Метод, который удаляет задачу из списка задач tasks.
+        /// </summary>
         public void RemoveTask(Task task)
         {
             tasks.Remove(task); 
         }
+        /// <summary>
+        /// Конструктор, который создает новый экземпляр класса и заполняет его данными.
+        /// </summary>
         public Project(DateTime deadline, Employee customer, Employee teamLead, string description)
         {
             this.deadline = deadline;
